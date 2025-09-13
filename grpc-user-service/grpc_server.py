@@ -12,7 +12,7 @@ class UserServiceServicer(user_service_pb2_grpc.UserServiceServicer):
 
     def GetUser(self, request, context):
         """Метод GetUser обрабатывает входящий запрос"""
-        print(f'Получен запрос к методу GetUser от пользователя: {request.username}')
+        print(f"Получен запрос к методу GetUser от пользователя: {request.username}")
 
         # Формируем и возвращаем ответное сообщение
         return user_service_pb2.GetUserResponse(message=f"Привет, {request.username}!")
@@ -26,10 +26,12 @@ def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
 
     # Регистрируем сервис UserService на сервере
-    user_service_pb2_grpc.add_UserServiceServicer_to_server(UserServiceServicer(), server)
+    user_service_pb2_grpc.add_UserServiceServicer_to_server(
+        UserServiceServicer(), server
+    )
 
     # Настраиваем сервер для прослушивания порта 50051
-    server.add_insecure_port('[::]:50051')
+    server.add_insecure_port("[::]:50051")
 
     # Запускаем сервер
     server.start()
