@@ -5,7 +5,7 @@ from httpx import Response
 from clients.api_client import APIClient
 
 
-class UserRequestDict(TypedDict):
+class CreateUserRequestDict(TypedDict):
     """
     Описание запроса на создание пользователя.
     """
