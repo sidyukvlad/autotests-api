@@ -21,7 +21,7 @@ login_payload = {
 }
 
 login_response = httpx.post("http://localhost:8000/api/v1/authentication/login", json=login_payload)
-login_response_data = login_response.json()git
+login_response_data = login_response.json()
 
 assert create_user_response.status_code == 200
 

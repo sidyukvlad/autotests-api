@@ -1,4 +1,7 @@
+from typing import Any
+
 from httpx import Client, URL, Response, QueryParams
+from httpx._types import RequestData, RequestFiles
 
 
 class APIClient:
