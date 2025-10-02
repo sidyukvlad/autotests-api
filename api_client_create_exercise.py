@@ -9,13 +9,13 @@ from clients.files.files_schema import CreateFileRequestSchema, CreateFileRespon
 from clients.courses.courses_schema import CreateCourseRequestSchema
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema
 
-from tools.fakers import get_random_email
+from tools.fakers import fake
 
 public_users_client = get_public_users_client()
 
 # Создаем пользователя
 create_user_request = CreateUserRequestSchema(
-    email=get_random_email(),
+    email=fake.email(),
     password="string",
     last_name="string",
     first_name="string",
