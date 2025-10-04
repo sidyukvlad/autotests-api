@@ -14,6 +14,10 @@ def test_assert_negative_case():
     x, y = 5, 2
     assert (x + y) == 5
 
+def test_zero_division():
+    with pytest.raises(ZeroDivisionError):
+        1 / 0
+
 class TestUserAuthentification:
     def test_create_user(self):
         pass
