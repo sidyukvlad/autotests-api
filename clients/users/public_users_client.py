@@ -27,7 +27,6 @@ class PublicUserClient(APIClient):
     # Добавили новый метод
     def create_user(self, request: CreateUserRequestSchema) -> CreateUserResponseSchema:
         response = self.create_user_api(request)
-        print(response.json())
         return CreateUserResponseSchema.model_validate_json(response.text)
 
 
