@@ -4,7 +4,10 @@ from http import HTTPMethod, HTTPStatus
 from tools.assertions.base import assert_status_code, assert_equal
 from tools.assertions.users import assert_create_user_response
 from tools.assertions.schema import validate_json_schema
+import pytest
 
+@pytest.mark.users
+@pytest.mark.regression
 def test_create_user():
     public_users_client = get_public_users_client()
     
