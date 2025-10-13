@@ -6,7 +6,7 @@ from tools.assertions.base import assert_status_code
 from tools.assertions.authentication import assert_login_response
 from tools.assertions.schema import validate_json_schema
 from http import HTTPStatus
-from tests.conftest import UserFixture
+from fixtures.users import UserFixture
 import pytest
 
 

@@ -1,4 +1,3 @@
-from clients.authentification.authentification_client import get_authentification_client, AuthentificationClient
 from clients.users.public_users_client import get_public_users_client, PublicUserClient
 from clients.users.private_users_client import get_private_users_client, PrivateUsersClient
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
@@ -23,11 +22,6 @@ class UserFixture(BaseModel):
     @property
     def authentication_user(self) -> AuthenticationUserSchema:
         return AuthenticationUserSchema(email=self.email, password=self.password)
-
-
-@pytest.fixture
-def authentification_client() -> AuthentificationClient:
-    return get_authentification_client()
 
 
 @pytest.fixture
