@@ -32,5 +32,3 @@ model = CreateFileRequestSchema(
     directory="test",
     upload_file="path/to/my/file.txt",
 )
-
-print(model.model_dump(exclude={"upload_file"}))

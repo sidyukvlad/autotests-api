@@ -109,7 +109,6 @@ class ExercisesClient(APIClient):
         :return: Ответ от сервера в виде CreateExerciseResponseDict.
         """
         response = self.create_exercise_api(request)
-        print("response.text", response.text)
         return CreateExerciseResponseSchema.model_validate_json(response.text)
 
     def update_exercise(
