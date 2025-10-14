@@ -12,21 +12,21 @@ import pytest
 
 @pytest.mark.regression
 @pytest.mark.authentication
-def test_login(function_user: UserFixture, authentification_client: AuthentificationClient):
+class TestAuthentification:
+    def test_login(self, function_user: UserFixture, authentification_client: AuthentificationClient):
+        request = LoginRequestSchema(
+            email=function_user.email,
+            password=function_user.password,
+        )
 
-    request = LoginRequestSchema(
-        email=function_user.email,
-        password=function_user.password,
-    )
+        response = authentification_client.login_api(
+            request
+        )
+        response_data = LoginResponseSchema.model_validate_json(
+            response.text)
 
-    response = authentification_client.login_api(
-        request
-    )
-    response_data = LoginResponseSchema.model_validate_json(
-        response.text)
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_login_response(response_data)
 
-    assert_status_code(response.status_code, HTTPStatus.OK)
-    assert_login_response(response_data)
-
-    validate_json_schema(response.json(),
-                         response_data.model_json_schema())
+        validate_json_schema(response.json(),
+                            response_data.model_json_schema())

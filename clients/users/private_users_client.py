@@ -1,5 +1,4 @@
 from typing import TypedDict
-
 from httpx import Response
 
 from clients.api_client import APIClient
@@ -66,3 +65,5 @@ def get_private_users_client(user: AuthenticationUserSchema) -> PrivateUsersClie
     :return: Готовый к использованию PrivateUsersClient.
     """
     return PrivateUsersClient(client=get_private_http_client(user))
+
+
