@@ -11,10 +11,11 @@ class CourseFixture(BaseModel):
     response: CreateCourseResponseSchema
 
 @pytest.fixture
-def course_client(function_user: UserFixture) -> CoursesClient:
+def courses_client(function_user: UserFixture) -> CoursesClient:
     return get_courses_client()
 
 
+@pytest.fixture
 def function_course(
     courses_client: CoursesClient,
     function_user: UserFixture,
