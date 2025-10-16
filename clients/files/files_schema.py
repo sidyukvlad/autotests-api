@@ -27,8 +27,5 @@ class CreateFileResponseSchema(BaseModel):
     """
     file: FileSchema
 
-model = CreateFileRequestSchema(
-    filename="file.txt",
-    directory="test",
-    upload_file="path/to/my/file.txt",
-)
+class GetFileResponseSchema(BaseModel):
+    file: FileSchema
