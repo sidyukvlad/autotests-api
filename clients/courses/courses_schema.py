@@ -31,6 +31,9 @@ class GetCoursesQuerySchema(BaseModel):
 
 
 class GetCoursesResponseSchema(BaseModel):
+    """
+    Описание структуры ответа на получение списка курсов.
+    """
     courses: list[CourseSchema]
 
 
@@ -70,4 +73,7 @@ class UpdateCourseRequestSchema(BaseModel):
 
 
 class UpdateCourseResponseSchema(BaseModel):
+    """
+    Описание структуры ответа обновления курса.
+    """
     course: CourseSchema
