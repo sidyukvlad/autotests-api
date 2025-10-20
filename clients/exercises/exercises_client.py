@@ -53,7 +53,7 @@ class ExercisesClient(APIClient):
         )
 
     def update_exercise_api(
-        self, exercise_id: str, query: UpdateExerciseRequestSchema
+        self, exercise_id: str, request: UpdateExerciseRequestSchema
     ) -> Response:
         """
         Метод обновления задания
@@ -64,8 +64,8 @@ class ExercisesClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.patch(
-            f"/api/exercises/{exercise_id}",
-            query.model_dump(by_alias=True)
+            f"/api/v1/exercises/{exercise_id}",
+            json=request.model_dump(by_alias=True)
         )
 
     def delete_exercise_api(self, exercise_id: str) -> Response:
@@ -75,7 +75,7 @@ class ExercisesClient(APIClient):
         :param exercise_id: Идентификатор задания.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.delete(f"/api/exercises/{exercise_id}")
+        return self.delete(f"/api/v1/exercises/{exercise_id}")
 
     def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         """
