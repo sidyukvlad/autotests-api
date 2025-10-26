@@ -20,10 +20,13 @@ from allure_commons.types import Severity
 @allure.tag(AllureTag.REGRESSION, AllureTag.AUTHENTICATION)
 @allure.epic(AllureEpic.LMS)  # Добавили epic
 @allure.feature(AllureFeature.AUTHENTICATION)  # Добавили feature
+@allure.suite(AllureFeature.AUTHENTICATION)
+@allure.parent_suite(AllureEpic.LMS)
 class TestAuthentification:
     @allure.story(AllureStory.LOGIN)  # Добавили story
     @allure.title("Login with correct email and password")
     @allure.severity(Severity.BLOCKER)
+    @allure.sub_suite(AllureStory.LOGIN)
     def test_login(self, function_user: UserFixture, authentification_client: AuthentificationClient):
         request = LoginRequestSchema(
             email=function_user.email,

@@ -21,12 +21,15 @@ from allure_commons.types import Severity
 @allure.tag(AllureTag.USERS, AllureTag.REGRESSION)
 @allure.epic(AllureEpic.LMS)  # Добавили epic
 @allure.feature(AllureFeature.USERS)  # Добавили feature
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.USERS)
 class TestUsers:
     @pytest.mark.parametrize("domain", ["mail.ru", "gmail.com", "example.com"])
     @allure.tag(AllureTag.CREATE_ENTITY)
     @allure.story(AllureStory.CREATE_ENTITY)  # Добавили story
     @allure.title("Create user")
     @allure.severity(Severity.BLOCKER) 
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
     def test_create_user(self, domain: str, public_users_client: PublicUserClient):
         request = CreateUserRequestSchema(
             email=fake.email(domain=domain)
@@ -43,6 +46,7 @@ class TestUsers:
     @allure.story(AllureStory.GET_ENTITY)
     @allure.title("Get user me")
     @allure.severity(Severity.CRITICAL) 
+    @allure.sub_suite(AllureStory.GET_ENTITY)
     def test_get_user_me(
             self, 
             private_users_client: PrivateUsersClient, 

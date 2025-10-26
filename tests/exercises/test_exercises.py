@@ -22,11 +22,14 @@ from allure_commons.types import Severity
 @allure.tag(AllureTag.EXERCISES, AllureTag.REGRESSION)
 @allure.epic(AllureEpic.LMS)
 @allure.feature(AllureFeature.EXERCISES)
+@allure.suite(AllureFeature.EXERCISES)
+@allure.parent_suite(AllureEpic.LMS)
 class TestExercises:
     @allure.tag(AllureTag.CREATE_ENTITY)
     @allure.story(AllureStory.CREATE_ENTITY)  # Добавили story
     @allure.title("Create exercise")
     @allure.severity(Severity.BLOCKER)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
     def test_create_exercise(
         self, 
         function_user: UserFixture,
@@ -48,6 +51,7 @@ class TestExercises:
     @allure.story(AllureStory.GET_ENTITY)  # Добавили story
     @allure.title("Get exercise")
     @allure.severity(Severity.BLOCKER)
+    @allure.sub_suite(AllureStory.GET_ENTITY)
     def test_get_exercise(
         self,
         exercises_client: ExercisesClient,
@@ -66,6 +70,7 @@ class TestExercises:
     @allure.story(AllureStory.UPDATE_ENTITY)  # Добавили story
     @allure.title("Update exercise")
     @allure.severity(Severity.CRITICAL)
+    @allure.sub_suite(AllureStory.UPDATE_ENTITY)
     def test_update_exercise(
         self,
         exercises_client: ExercisesClient,
@@ -87,6 +92,7 @@ class TestExercises:
     @allure.story(AllureStory.DELETE_ENTITY)  # Добавили story
     @allure.title("Delete exercise")
     @allure.severity(Severity.CRITICAL)
+    @allure.sub_suite(AllureStory.DELETE_ENTITY)
     def test_delete_exercise(
         self,
         exercises_client: ExercisesClient,
@@ -110,6 +116,7 @@ class TestExercises:
     @allure.story(AllureStory.GET_ENTITIES)  # Добавили story
     @allure.title("Get exercises")
     @allure.severity(Severity.BLOCKER)
+    @allure.sub_suite(AllureStory.GET_ENTITIES)
     def test_get_exercises(
         self,
         exercises_client: ExercisesClient,
