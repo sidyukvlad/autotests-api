@@ -67,7 +67,7 @@ def assert_create_file_with_empty_filename_response(actual: ValidationErrorRespo
     assert_validation_error_response(actual, expected)
 
 
-def assert_create_file_with_empty_filename_response(actual: ValidationErrorResponseSchema):
+def assert_create_file_with_empty_directory_response(actual: ValidationErrorResponseSchema):
     """
     Проверяет, что ответ на создание файла с пустым значением директории соответствует ожидаемой валидационной ошибке.
 
@@ -78,10 +78,10 @@ def assert_create_file_with_empty_filename_response(actual: ValidationErrorRespo
         details = [
             ValidationErrorSchema(
                 type="string_too_short",  # Тип ошибки, связанной с слишком короткой строкой.
-                input="",  # Пустое имя файла.
+                input="",  # Пустая директория.
                 context={"min_length": 1},  # Минимальная длина строки должна быть 1 символ.
                 message="String should have at least 1 character",  # Сообщение об ошибке.
-                location=["body", "filename"]  # Ошибка возникает в теле запроса, поле "filename".
+                location=["body", "directory"]  # Ошибка возникает в теле запроса, поле "directory".
             )
         ]
     )

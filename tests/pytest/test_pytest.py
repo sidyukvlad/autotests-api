@@ -12,6 +12,8 @@ def test_create_user():
 def test_assert_positive_case():
     assert (2 + 2) == 4
 
+
+@pytest.mark.xfail(reason="negative test")
 def test_assert_negative_case():
     x, y = 5, 2
     assert (x + y) == 5

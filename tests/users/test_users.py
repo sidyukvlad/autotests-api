@@ -8,12 +8,25 @@ from tools.fakers import fake
 from fixtures.users import UserFixture
 from http import HTTPStatus
 import pytest
+import allure
+from tools.allure.tags import AllureTag
+from tools.allure.epics import AllureEpic  # Импортируем enum AllureEpic
+from tools.allure.features import AllureFeature  # Импортируем enum AllureFeature
+from tools.allure.stories import AllureStory  # Импортируем enum AllureStory
+from allure_commons.types import Severity
 
 
 @pytest.mark.users
 @pytest.mark.regression
+@allure.tag(AllureTag.USERS, AllureTag.REGRESSION)
+@allure.epic(AllureEpic.LMS)  # Добавили epic
+@allure.feature(AllureFeature.USERS)  # Добавили feature
 class TestUsers:
     @pytest.mark.parametrize("domain", ["mail.ru", "gmail.com", "example.com"])
+    @allure.tag(AllureTag.CREATE_ENTITY)
+    @allure.story(AllureStory.CREATE_ENTITY)  # Добавили story
+    @allure.title("Create user")
+    @allure.severity(Severity.BLOCKER) 
     def test_create_user(self, domain: str, public_users_client: PublicUserClient):
         request = CreateUserRequestSchema(
             email=fake.email(domain=domain)
@@ -26,6 +39,10 @@ class TestUsers:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
     
+    @allure.tag(AllureTag.GET_ENTITY)
+    @allure.story(AllureStory.GET_ENTITY)
+    @allure.title("Get user me")
+    @allure.severity(Severity.CRITICAL) 
     def test_get_user_me(
             self, 
             private_users_client: PrivateUsersClient, 
