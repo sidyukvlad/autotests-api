@@ -40,5 +40,5 @@ env.bak/
 venv.bak/
 
 # Allure
-allure*
+allure-*
 
