@@ -3,7 +3,7 @@ from tools.assertions.base import assert_equal, assert_length
 import allure
 from tools.logger import get_logger
 
-logger = get_logger("AUTHENTIFICATION_ASSERTIONS")
+logger = get_logger("ERRORS_ASSERTIONS")
 
 @allure.step("Check validation error")
 def assert_validation_error(actual:ValidationErrorSchema, expected:ValidationErrorSchema):

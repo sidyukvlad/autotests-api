@@ -5,7 +5,7 @@ from tools.assertions.files import assert_file
 import allure
 from tools.logger import get_logger
 
-logger = get_logger("AUTHENTIFICATION_ASSERTIONS")
+logger = get_logger("COURSES_ASSERTIONS")
 
 
 @allure.step("Check update course response")
