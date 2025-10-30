@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/exercises' \
+ -H host: value \
+ -H accept: value \
+ -H accept-encoding: value \
+ -H connection: value \
+ -H user-agent: value \
+ -H authorization: value \
+ -H content-length: value \
+ -H content-type: value \
+ -d '{"title":"Money want only.","courseId":"1b695d63-d9fc-4549-9bac-0e76a28f2a30","maxScore":100,"minScore":18,"orderIndex":35,"description":"Throw small various bill become beat. Young speak pass ok young vote.\nLet include forward both society. Far two adult main often. Charge performance well section.","estimatedTime":"10 weeks"}'

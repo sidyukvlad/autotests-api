@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8000/api/v1/exercises/a2d368ce-4dfb-45c4-a5e4-9e7625edd09c' \
+ -H host: value \
+ -H accept: value \
+ -H accept-encoding: value \
+ -H connection: value \
+ -H user-agent: value \
+ -H authorization: value \
+ -H content-length: value \
+ -H content-type: value \
+ -d '{"title":"Everybody building nothing view anyone just good.","maxScore":92,"minScore":20,"orderIndex":40,"description":"Treatment month assume individual game suggest. Property easy difference break.\nWho point resource ahead believe. Who too fall bit service spend add any.","estimatedTime":"4 weeks"}'
