@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H host: value \
+ -H accept: value \
+ -H accept-encoding: value \
+ -H connection: value \
+ -H user-agent: value \
+ -H authorization: value \
+ -H content-length: value \
+ -H content-type: value \
+ -d '{"title":"Explain bad ever four.","maxScore":55,"minScore":17,"description":"Expect get floor everybody reason. Western approach media realize health money education before. Air present later paper.","estimatedTime":"8 weeks","previewFileId":"10c5ca48-1e61-4014-af8f-49d3eb947065","createdByUserId":"b3d113e3-f7c8-4870-9fb9-24dcd2b7700c"}'

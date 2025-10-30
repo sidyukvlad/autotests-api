@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H host: value \
+ -H accept: value \
+ -H accept-encoding: value \
+ -H connection: value \
+ -H user-agent: value \
+ -H authorization: value \
+ -H content-length: value \
+ -H content-type: value \
+ -d '{"title":"Technology discover continue recent break time.","maxScore":73,"minScore":22,"description":"Attention pressure work interview. Study player recently drug.\nFather understand send modern.\nArt know hospital our help shake.","estimatedTime":"8 weeks","previewFileId":"95c19b47-a589-4532-a048-d1c04c0b3532","createdByUserId":"e05e9316-2d73-4c73-b487-8455e1f2583a"}'
