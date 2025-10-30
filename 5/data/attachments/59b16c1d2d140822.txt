@@ -1,0 +1,8 @@
+curl -X 'GET' \
+ 'http://localhost:8000/api/v1/files/5e314ae7-919d-4e7c-a1cc-929a1e20a1fd' \
+ -H host: value \
+ -H accept: value \
+ -H accept-encoding: value \
+ -H connection: value \
+ -H user-agent: value \
+ -H authorization: value

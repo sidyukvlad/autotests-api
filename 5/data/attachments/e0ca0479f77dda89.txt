@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H host: value \
+ -H accept: value \
+ -H accept-encoding: value \
+ -H connection: value \
+ -H user-agent: value \
+ -H authorization: value \
+ -H content-length: value \
+ -H content-type: value \
+ -d '{"title":"Have rock artist surface media heart design clear.","maxScore":52,"minScore":18,"description":"Continue data environmental address business environment mouth.\nSoldier pressure respond step establish final soldier. Growth factor specific fight director.","estimatedTime":"4 weeks","previewFileId":"8d5b07b8-3273-40f4-a849-d52d2c9522dd","createdByUserId":"25afa922-055e-4eb6-a1c5-d009c67f017c"}'

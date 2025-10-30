@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/exercises' \
+ -H host: value \
+ -H accept: value \
+ -H accept-encoding: value \
+ -H connection: value \
+ -H user-agent: value \
+ -H authorization: value \
+ -H content-length: value \
+ -H content-type: value \
+ -d '{"title":"Democratic establish old take PM relate let.","courseId":"f67a322e-203f-4914-a093-59609d2ef482","maxScore":73,"minScore":4,"orderIndex":89,"description":"Because man social fall bag also officer. Fear say loss image investment bank then. Situation model society focus provide local. Evidence forget camera suggest investment prove the.","estimatedTime":"1 weeks"}'

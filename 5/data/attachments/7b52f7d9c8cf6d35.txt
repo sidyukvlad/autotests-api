@@ -1,0 +1,21 @@
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/exercises
+INFO     BASE_ASSERTIONS:base.py:18 Check that response status code equals to {expected}
+INFO     EXERCISES_LOGGER:exercises.py:24 Check create exercise response
+INFO     BASE_ASSERTIONS:base.py:36 Check that "title" equals to "Technology bit lead have test case deep."
+INFO     BASE_ASSERTIONS:base.py:36 Check that "course_id" equals to "2493ef50-405b-4033-bfa0-b502483ec0d2"
+INFO     BASE_ASSERTIONS:base.py:36 Check that "max_score" equals to "50"
+INFO     BASE_ASSERTIONS:base.py:36 Check that "min_score" equals to "19"
+INFO     BASE_ASSERTIONS:base.py:36 Check that "order_index" equals to "65"
+INFO     BASE_ASSERTIONS:base.py:36 Check that "description" equals to "Time key attack page policy difference recognize defense. Out floor ever husband national. Admit night yes above out trouble power imagine.
+So fear site lead add. Public move occur movement."
+INFO     BASE_ASSERTIONS:base.py:36 Check that "estimated_time" equals to "4 weeks"
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validate JSON schema

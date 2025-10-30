@@ -1,0 +1,10 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/users' \
+ -H host: value \
+ -H accept: value \
+ -H accept-encoding: value \
+ -H connection: value \
+ -H user-agent: value \
+ -H content-length: value \
+ -H content-type: value \
+ -d '{"email":"leehunt@example.com","password":"*zAygWg*8Q","lastName":"Camacho","firstName":"Nicole","middleName":"Kerry"}'
