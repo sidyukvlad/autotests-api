@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H host: value \
+ -H accept: value \
+ -H accept-encoding: value \
+ -H connection: value \
+ -H user-agent: value \
+ -H authorization: value \
+ -H content-length: value \
+ -H content-type: value \
+ -d '{"title":"Impact party student result area.","maxScore":82,"minScore":25,"description":"Mention few late position rest. Structure like dog value.","estimatedTime":"7 weeks","previewFileId":"2dc9ced4-faa5-4a66-ae86-b93fddc9ee44","createdByUserId":"7aeb3559-b4f8-491f-bcc0-143e83681cff"}'

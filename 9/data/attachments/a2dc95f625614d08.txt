@@ -1,0 +1,24 @@
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:26 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:26 Make GET request to http://localhost:8000/api/v1/exercises/63200b7e-511e-4a2a-aa46-86788a16c8ec
+INFO     HTTP_LOGGER:event_hooks.py:35 Got response  200 OK from http://localhost:8000/api/v1/exercises/63200b7e-511e-4a2a-aa46-86788a16c8ec
+INFO     BASE_ASSERTIONS:base.py:18 Check that response status code equals to {expected}
+INFO     EXERCISES_LOGGER:exercises.py:68 Check get exercise response
+INFO     EXERCISES_LOGGER:exercises.py:44 Check assert_exercise
+INFO     BASE_ASSERTIONS:base.py:36 Check that "id" equals to "63200b7e-511e-4a2a-aa46-86788a16c8ec"
+INFO     BASE_ASSERTIONS:base.py:36 Check that "title" equals to "Follow other maintain dream activity resource."
+INFO     BASE_ASSERTIONS:base.py:36 Check that "course_id" equals to "f8aa2d50-a0ae-4ca1-bba9-c88abb41c9f3"
+INFO     BASE_ASSERTIONS:base.py:36 Check that "max_score" equals to "87"
+INFO     BASE_ASSERTIONS:base.py:36 Check that "min_score" equals to "28"
+INFO     BASE_ASSERTIONS:base.py:36 Check that "order_index" equals to "64"
+INFO     BASE_ASSERTIONS:base.py:36 Check that "description" equals to "Pattern media fear every claim ground fly. Newspaper fear majority hard hair to. Officer organization this."
+INFO     BASE_ASSERTIONS:base.py:36 Check that "estimated_time" equals to "8 weeks"
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validate JSON schema
