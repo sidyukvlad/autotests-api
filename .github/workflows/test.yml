@@ -85,7 +85,7 @@ jobs:
           path: .
           
 
-      - name: Deploy to Github  Pages
+      - name: Deploy to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
