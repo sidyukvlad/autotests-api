@@ -57,7 +57,7 @@ jobs:
 
         
       - name: Generate Allure Report with history
-        uses: simple-elf/allure-report-action@1.13
+        uses: simple-elf/allure-report-action@1.12
         if: always()
         with:
           allure_results: allure-results
@@ -68,6 +68,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages # default: gh-pages
           publish_dir: allure-history
 
 
