@@ -66,8 +66,10 @@ jobs:
       - name: Upload report
         uses: actions/upload-artifact@v4
         with:
-          name: allure
-          path: allure-results
+          name: allure-data
+          path: |
+           allure-results
+           allure-history
 
 
 
@@ -79,7 +81,8 @@ jobs:
       - name: Download report
         uses: actions/download-artifact@v5
         with:
-          name: allure
+          name: allure-data
+          path: .
           
 
       - name: Deploy to Github  Pages
