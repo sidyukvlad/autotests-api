@@ -1,8 +1,0 @@
-curl -X 'GET' \
- 'http://localhost:8000/api/v1/exercises?courseId=6105c2b6-4c3b-4a7d-a112-8c4be5ba5f64' \
- -H host: value \
- -H accept: value \
- -H accept-encoding: value \
- -H connection: value \
- -H user-agent: value \
- -H authorization: value
