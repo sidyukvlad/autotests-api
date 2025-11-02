@@ -55,7 +55,6 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-        
       - name: Generate Allure Report with history
         uses: simple-elf/allure-report-action@master
         if: always()
@@ -63,27 +62,38 @@ jobs:
           allure_results: allure-results
           allure_history: allure-history
 
-      - name: Upload report
+      - name: Upload Allure results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: allure-data
-          path: |
-           allure-results
-           allure-history
-
-
+          name: allure-results
+          path: allure-results
 
 
   publish-report:
+    if: always()
+    needs: [ run-tests ]
     runs-on: ubuntu-latest
-    needs: run-tests
+
     steps:
-      - name: Download report
-        uses: actions/download-artifact@v5
+
+      - name: Check out repository
+        uses: actions/checkout@v4
         with:
-          name: allure-data
-          path: .
-          
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Download Allure results
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
+
+      - name: Download Allure results
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
 
       - name: Deploy to  Github Pages
         if: always()
@@ -92,12 +102,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages # default: gh-pages
           publish_dir: allure-history
-
-
-
-
-      
-
-
-    
-
